@@ -1,0 +1,52 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h3>안녕하세요 전성혜님,</h3>
+
+  <span data-bind="text: value"></span>
+  <label>의 "딱!"앉으실 자리를 보여드릴께요</label>
+<br/>      <br/>
+
+  <div id="div1">
+
+
+
+  </div>
+  <div id='chart-container'>
+  <div style="display:inline-block; max-width:350px;width:100%;">
+
+  </div>
+  <div>
+    <div style="display:inline-block; padding-right: 1%;max-width:300px;width:90%;">
+      <div id='pictochart1' data-bind="ojComponent:{
+            component: 'ojPictoChart',
+            items: pictoChartItems,
+            selectionMode: selectionValue,
+            selection: selectedItemsValue,
+            drilling: drillingValue,
+            animationOnDataChange: 'auto',
+            columnWidth: 48, rowHeight: 48,
+            optionChange: picto1Listener,
+            drill: picto1DrillListener
+          }"
+          style="width:100%;">
+      </div>
+      <div style="height:65px;">
+        <div style="height:inherit; max-width:120px;display: inline-block;">
+          <label id="currentText" style="float:left;color:#737373;font-weight:bolder;"></label>
+          <label id="currentText2" style="padding-left:8px;float:left;color:#737373;font-weight:bold;"></label>
+        </div>
+        <div style="height:inherit; max-width:120px;display: inline-block;">
+          <label id="currentText3" style="float:left;color:#737373;font-weight:bolder;"></label>
+          <label id="currentText4" style="padding-left:8px;float:left;color:#737373;font-weight:bold;"></label>
+        </div>
+      </div>
+    </div>
+    <label for="date">다른 날짜를 조회하시려면 선택 해 주세요.</label>
+    <input id="date" data-bind="ojComponent: {component: 'ojInputDate',
+                                                value: value}"/>
+  </div>
+</div>
+</div>
